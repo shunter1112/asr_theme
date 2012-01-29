@@ -1,0 +1,121 @@
+=easy-sizing($width, $height: $width)
+  width: #{$width}px
+  height: #{$height}px
+
+=easy-position($position,$direction,$hsize,$vsize)
+  position: #{$position}  
+  @if $direction == top or $direction == topleft or $direction == topright
+    top: #{$hsize}px
+  @if $direction == left or $direction == topleft or $direction == bottomleft
+    left: #{$vsize}px
+  @if $direction == right or $direction == topright or $direction == bottomright
+    right: #{$vsize}px    
+  @if $direction == bottom or $direction == bottomleft or $direction == bottomright
+    bottom: #{$hsize}px
+
+=easy-radius($size)
+  border-radius: #{$size}px
+  -webkit-border-radius: #{$size}px
+  -moz-border-radius: #{$size}px
+  -o-border-radius: #{$size}px
+  -ms-border-radius: #{$size}px
+
+=easy-quarter-radius($hdirection,$vdirection,$size)
+  border-#{$hdirection}-#{$vdirection}-radius: #{$size}px
+  -webkit-border-#{$hdirection}-#{$vdirection}-radius: #{$size}px
+  -moz-border-radius-#{$hdirection}#{$vdirection}: #{$size}px
+  -ms-border-radius-#{$hdirection}#{$vdirection}: #{$size}px
+  -o-border-radius-#{$hdirection}#{$vdirection}: #{$size}px
+
+=easy-half-radius($direction,$size)
+  @if $direction == top or $direction == right
+    +easy-quarter-radius(top,right,#{$size})
+  @if $direction == top or $direction == left
+    +easy-quarter-radius(top,left,#{$size})
+  @if $direction == bottom or $direction == right
+    +easy-quarter-radius(bottom,right,#{$size})
+  @if $direction == bottom or $direction == left
+    +easy-quarter-radius(bottom,left,#{$size})
+
+=easy-background-size($width, $height: $width)
+  background-size: #{$width}px #{$height}px           
+  -webkit-background-size: #{$width}px #{$height}px
+  -moz-background-size: #{$width}px #{$height}px    
+  -ms-background-size: #{$width}px #{$height}px    
+  -o-background-size: #{$width}px #{$height}px
+  
+=easy-box-shadow($x,$y,$glow,$color)
+  box-shadow: #{$x}px #{$y}px #{$glow}px #{$color}
+  -webkit-box-shadow: #{$x}px #{$y}px #{$glow}px #{$color}
+  -moz-box-shadow: #{$x}px #{$y}px #{$glow}px #{$color}
+  -ms-box-shadow: #{$x}px #{$y}px #{$glow}px #{$color}
+  -o-box-shadow: #{$x}px #{$y}px #{$glow}px #{$color}
+  -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(color=#{$color},direction=180,strength=2,enabled=true)"
+  
+=easy-multiple-background($url1,$url2)
+  background: url(#{$url1}) no-repeat, url(#{$url2}) no-repeat
+  *background: transparent url(#{$url2}) 
+  background: transparent url(#{$url2})\9 
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader (src=#{$url1}, sizingMethod='crop')"
+  
+=easy-box-shadow-i($x,$y,$glow,$color)
+  box-shadow: inset #{$x}px #{$y}px #{$glow}px #{$color}
+  -webkit-box-shadow: inset #{$x}px #{$y}px #{$glow}px #{$color}
+  -moz-box-shadow: inset #{$x}px #{$y}px #{$glow}px #{$color}
+  -ms-box-shadow: inset #{$x}px #{$y}px #{$glow}px #{$color}
+  -o-box-shadow: inset #{$x}px #{$y}px #{$glow}px #{$color}
+
+=easy-box-shadow-2($x,$y,$glow,$color,$x2,$y2,$glow2,$color2)
+  box-shadow: #{$x}px #{$y}px #{$glow}px #{$color}, #{$x2}px #{$y2}px #{$glow2}px #{$color2}
+  -webkit-box-shadow: #{$x}px #{$y}px #{$glow}px #{$color}, #{$x2}px #{$y2}px #{$glow2}px #{$color2}
+  -moz-box-shadow: #{$x}px #{$y}px #{$glow}px #{$color}, #{$x2}px #{$y2}px #{$glow2}px #{$color2}
+  -ms-box-shadow: #{$x}px #{$y}px #{$glow}px #{$color}, #{$x2}px #{$y2}px #{$glow2}px #{$color2}
+  -o-box-shadow: #{$x}px #{$y}px #{$glow}px #{$color}, #{$x2}px #{$y2}px #{$glow2}px #{$color2}
+
+=easy-box-shadow-2i($x,$y,$glow,$color,$x2,$y2,$glow2,$color2)
+  box-shadow: #{$x}px #{$y}px #{$glow}px #{$color}, inset #{$x2}px #{$y2}px #{$glow2}px #{$color2}
+  -webkit-box-shadow: #{$x}px #{$y}px #{$glow}px #{$color}, inset #{$x2}px #{$y2}px #{$glow2}px #{$color2}
+  -moz-box-shadow: #{$x}px #{$y}px #{$glow}px #{$color}, inset #{$x2}px #{$y2}px #{$glow2}px #{$color2}
+  -ms-box-shadow: #{$x}px #{$y}px #{$glow}px #{$color}, inset #{$x2}px #{$y2}px #{$glow2}px #{$color2}
+  -o-box-shadow: #{$x}px #{$y}px #{$glow}px #{$color}, inset #{$x2}px #{$y2}px #{$glow2}px #{$color2}
+
+=easy-box-shadow-i2($x,$y,$glow,$color,$x2,$y2,$glow2,$color2)
+  box-shadow: inset #{$x}px #{$y}px #{$glow}px #{$color}, inset #{$x2}px #{$y2}px #{$glow2}px #{$color2}
+  -webkit-box-shadow: inset #{$x}px #{$y}px #{$glow}px #{$color}, inset #{$x2}px #{$y2}px #{$glow2}px #{$color2}
+  -moz-box-shadow: inset #{$x}px #{$y}px #{$glow}px #{$color}, inset #{$x2}px #{$y2}px #{$glow2}px #{$color2}
+  -ms-box-shadow: inset #{$x}px #{$y}px #{$glow}px #{$color}, inset #{$x2}px #{$y2}px #{$glow2}px #{$color2}
+  -o-box-shadow: inset #{$x}px #{$y}px #{$glow}px #{$color}, inset #{$x2}px #{$y2}px #{$glow2}px #{$color2}
+
+=easy-gradient($start,$end)
+  background-color: #{$start}
+  background-image: linear-gradient(#{$start} 0%, #{$end} 100%)
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #{$start}), color-stop(1, #{$end}))
+  background-image: -moz-linear-gradient(#{$start} 0%, #{$end} 100%)
+  background-image: -ms-linear-gradient(#{$start}, #{$end})
+  background-image: -o-linear-gradient(#{$start}, #{$end})
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#{$start}, endColorstr=#{$end})"  
+  
+=easy-gradient-3($start,$mid,$end)
+  background-color: #{$start}
+  background-image: linear-gradient(#{$start} 0%, #{$mid} 50%, #{$end} 100%)
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #{$start}), color-stop(0.5, #{$mid}), color-stop(1, #{$end}))
+  background-image: -moz-linear-gradient(#{$start} 0%, #{$mid} 50%, #{$end} 100%)
+  background-image: -ms-linear-gradient(#{$start} 0%, #{$mid} 50%, #{$end} 100%)
+  background-image: -o-linear-gradient(#{$start} 0%, #{$mid} 50%, #{$end} 100%)
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#{$start}, endColorstr=#{$end})"  
+  
+=easy-gradient-4($start,$mid1,$mid2,$end)
+  background-color: #{$start}
+  background-image: linear-gradient(#{$start} 0%, #{$mid1} 50%, #{$mid2} 50%, #{$end} 100%)
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #{$start}), color-stop(0.5, #{$mid1}), color-stop(0.5, #{$mid2}), color-stop(1, #{$end}))
+  background-image: -moz-linear-gradient(#{$start} 0%, #{$mid1} 50%, #{$mid2} 50%, #{$end} 100%)
+  background-image: -ms-linear-gradient(#{$start} 0%, #{$mid1} 50%, #{$mid2} 50%, #{$end} 100%)
+  background-image: -o-linear-gradient(#{$start} 0%, #{$mid1} 50%, #{$mid2} 50%, #{$end} 100%)
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#{$start}, endColorstr=#{$end})"  
+  
+=easy-transition($duration, $property: all, $timing-function: ease)
+  transition: #{$property} #{$duration}s #{$timing-function}
+  -webkit-transition: #{$property} #{$duration}s #{$timing-function}
+  moz-transition: #{$property} #{$duration}s #{$timing-function}
+  -o-transition: #{$property} #{$duration}s #{$timing-function}
+  -ms-transition: #{$property} #{$duration}s #{$timing-function}
