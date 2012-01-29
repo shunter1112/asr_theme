@@ -1,0 +1,208 @@
+@charset "UTF-8";
+/*Theme Name: Adobe Script Reference
+ *Theme URI: http://asr.shunter.jp/
+ *Description: アドビ製品のスクリプトリファレンスサイトです。個人サイトのため、情報が完全でないことをご了承ください。
+ *Author: Shunter (http://shunter.jp)
+ *Version: 1.0
+ *License: GNU General Public License
+ *License URI: license.txt
+ *Tags: adobe, script, reference */
+/*html5doctor.com Reset Stylesheet
+ *v1.4
+ *2009-07-27
+ *Author: Richard Clark - http://richclarkdesign.com */
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, dialog, figure, footer, header, hgroup, menu, nav, section, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent; }
+
+body {
+  line-height: 1; }
+
+article, aside, dialog, figure, footer, header, hgroup, nav, section {
+  display: block; }
+
+nav ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after {
+  content: "";
+  content: none; }
+
+ol, ul {
+  list-style: none; }
+
+q:before, q:after {
+  content: "";
+  content: none; }
+
+a {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent; }
+
+ins {
+  background-color: #ffff99;
+  color: black;
+  text-decoration: none; }
+
+mark {
+  background-color: #ffff99;
+  color: black;
+  font-style: italic;
+  font-weight: bold; }
+
+del {
+  text-decoration: line-through; }
+
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted black;
+  cursor: help; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0; }
+
+input, select {
+  vertical-align: middle; }
+
+html {
+  height: 100%; }
+  html body {
+    height: 100%;
+    font-family: sans-serif; }
+    html body #Everything {
+      height: 100%; }
+      html body #Everything #Sidebar {
+        display: block;
+        width: 150px;
+        background: #141e1e;
+        height: 100%;
+        float: left;
+        box-shadow: inset -1px 0px 6px black;
+        -webkit-box-shadow: inset -1px 0px 6px black;
+        -moz-box-shadow: inset -1px 0px 6px black;
+        -ms-box-shadow: inset -1px 0px 6px black;
+        -o-box-shadow: inset -1px 0px 6px black; }
+        html body #Everything #Sidebar h1 {
+          width: 150px;
+          text-align: center;
+          color: #f1f6fa;
+          font-size: 11px;
+          text-shadow: 0px 2px 3px black; }
+          html body #Everything #Sidebar h1:before {
+            content: "ASR";
+            display: block;
+            height: 60px;
+            padding: 10px 0px 0px;
+            text-align: center;
+            font-family: serif;
+            font-size: 60px; }
+        html body #Everything #Sidebar ul {
+          width: 150px;
+          margin-top: 30px; }
+          html body #Everything #Sidebar ul li {
+            display: block;
+            height: 30px;
+            line-height: 30px;
+            position: relative;
+            border-width: 1px 0px;
+            border-style: solid;
+            border-color: #182424 black #101818; }
+            html body #Everything #Sidebar ul li a {
+              color: white;
+              text-shadow: 0px 2px 3px black;
+              font-size: 12px;
+              padding-left: 37px;
+              height: 30px;
+              line-height: 30px; }
+              html body #Everything #Sidebar ul li a:before {
+                display: block;
+                width: 22px;
+                height: 22px;
+                text-align: center;
+                line-height: 22px;
+                border-width: 1px 0px 0px 1px;
+                border-style: solid;
+                font-weight: bold;
+                position: absolute;
+                top: 4px;
+                left: 4px;
+                box-shadow: 0px 1px 3px black;
+                -webkit-box-shadow: 0px 1px 3px black;
+                -moz-box-shadow: 0px 1px 3px black;
+                -ms-box-shadow: 0px 1px 3px black;
+                -o-box-shadow: 0px 1px 3px black;
+                -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(color=black,direction=180,strength=2,enabled=true)"; }
+            html body #Everything #Sidebar ul li#Photoshop a:before {
+              content: "Ps";
+              color: #4dd5fb;
+              text-shadow: 0px -1px 0px #064576;
+              border-color: #41d1f8 #023962;
+              background-color: #0f7fcc;
+              background-image: linear-gradient(#0f7fcc 0%, #064576 100%);
+              background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #0f7fcc), color-stop(1, #064576));
+              background-image: -moz-linear-gradient(#0f7fcc 0%, #064576 100%);
+              background-image: -ms-linear-gradient(#0f7fcc, #064576);
+              background-image: -o-linear-gradient(#0f7fcc, #064576);
+              -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#0f7fcc, endColorstr=#064576)"; }
+            html body #Everything #Sidebar ul li#Illustrator a:before {
+              content: "Ai";
+              color: #fed54b;
+              text-shadow: 0px -1px 0px #ae5819;
+              border-color: #fdd34a #964e0f;
+              background-color: #f19022;
+              background-image: linear-gradient(#f19022 0%, #ae5819 100%);
+              background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #f19022), color-stop(1, #ae5819));
+              background-image: -moz-linear-gradient(#f19022 0%, #ae5819 100%);
+              background-image: -ms-linear-gradient(#f19022, #ae5819);
+              background-image: -o-linear-gradient(#f19022, #ae5819);
+              -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#f19022, endColorstr=#ae5819)"; }
+            html body #Everything #Sidebar ul li#Fireworks a:before {
+              content: "Fw";
+              color: #feea38;
+              text-shadow: 0px -1px 0px #a87417;
+              border-color: #fef074 #936813;
+              background-color: #d9ae24;
+              background-image: linear-gradient(#d9ae24 0%, #a87417 100%);
+              background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #d9ae24), color-stop(1, #a87417));
+              background-image: -moz-linear-gradient(#d9ae24 0%, #a87417 100%);
+              background-image: -ms-linear-gradient(#d9ae24, #a87417);
+              background-image: -o-linear-gradient(#d9ae24, #a87417);
+              -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#d9ae24, endColorstr=#a87417)"; }
+      html body #Everything #Contents {
+        height: 100%;
+        overflow: scroll;
+        background: #303536;
+        z-index: 1; }
+        html body #Everything #Contents #Post {
+          padding: 20px; }
+          html body #Everything #Contents #Post h1 {
+            color: white;
+            font-size: 32px;
+            padding-bottom: 20px; }
+          html body #Everything #Contents #Post > .description {
+            color: #dddddd;
+            padding-bottom: 20px;
+            font-size: 14px;
+            line-height: 17px; }
+          html body #Everything #Contents #Post h2 {
+            color: white; }
